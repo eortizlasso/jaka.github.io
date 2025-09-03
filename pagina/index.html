@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaka Jaka House ✦ Dulces Mexicanos a Colombia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color1: #ff4f81;
+      --color2: #ffb347;
+      --color3: #20c997;
+      --color4: #ffdd59;
+      --bg: #fffdf8;
+      --text-dark: #333;
+      --text-light: #666;
+      --radius: 18px;
+    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+    }
+    header {
+      background: linear-gradient(90deg, var(--color1), var(--color2));
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 28px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+    nav a:hover {text-decoration: underline;}
+
+    .hero {
+      background: linear-gradient(120deg, var(--color2) 0%, var(--color4) 100%);
+      padding: 60px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: var(--radius);
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+    .btn-wa {
+      background: #25D366;
+      color: white;
+    }
+    .btn-wa:hover {background: #1ebe5d;}
+    .btn-sec {
+      background: white;
+      border: 2px solid var(--color1);
+      color: var(--color1);
+      margin-left: 12px;
+    }
+    .btn-sec:hover {background: var(--color1); color: white;}
+    .hero img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .productos {
+      padding: 60px 8%;
+      background: white;
+    }
+    .productos h3 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+    .card:hover {transform: translateY(-6px);}
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h4 {margin-bottom: 8px; font-size: 18px;}
+    .price {font-weight: 700; color: var(--color3); margin-bottom: 8px;}
+    .card-content p {font-size: 14px; color: var(--text-light); flex: 1;}
+    .card-content .btn-wa {margin-top: 12px; text-align: center;}
+
+    .envios {
+      background: var(--color4);
+      padding: 50px 8%;
+      text-align: center;
+    }
+    .envios h3 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+    .envios p {max-width: 700px; margin: auto; color: #333;}
+
+    footer {
+      background: var(--color1);
+      color: white;
+      padding: 24px 8%;
+      text-align: center;
+    }
+    footer a {color: white; font-weight: 600; text-decoration: underline;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍭 Jaka Jaka House</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#envios">Envíos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Auténticos dulces mexicanos enviados a Colombia</h2>
+      <p>Disfruta el sabor picante, dulce y único de México. Haz tu pedido fácil y rápido a través de WhatsApp.</p>
+      <a href="https://wa.me/573503757354?text=Hola%20quiero%20hacer%20un%20pedido" target="_blank" class="btn btn-wa">Pedir por WhatsApp</a>
+      <a href="#productos" class="btn btn-sec">Ver catálogo</a>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1606813902830-8c8aab7d2d3b?q=80&w=1000&auto=format&fit=crop" alt="Dulces Mexicanos">
+    </div>
+  </section>
+
+  <section class="productos" id="productos">
+    <h3>Nuestros Productos</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615395174161-8bda1a3b6f3c?q=80&w=1200&auto=format&fit=crop" alt="Tamarindo en polvo">
+        <div class="card-content">
+          <h4>Tamarindo en polvo</h4>
+          <div class="price">$18.000 COP</div>
+          <p>Pack 3 unidades — sabor intenso y picosito.</p>
+          <a href="https://wa.me/573503757354?text=Quiero%20Tamarindo%20en%20polvo" target="_blank" class="btn btn-wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1610137126579-1b0bb4a2f9b8?q=80&w=1200&auto=format&fit=crop" alt="Paletas Mexicanas">
+        <div class="card-content">
+          <h4>Paletas artesanales</h4>
+          <div class="price">$22.000 COP</div>
+          <p>Caja x6 — sabores surtidos, dulces y picositos.</p>
+          <a href="https://wa.me/573503757354?text=Quiero%20Paletas%20artesanales" target="_blank" class="btn btn-wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1608496381618-2f24f0bb4d66?q=80&w=1200&auto=format&fit=crop" alt="Mazapanes">
+        <div class="card-content">
+          <h4>Mazapanes tradicionales</h4>
+          <div class="price">$12.000 COP</div>
+          <p>Bolsa x8 — clásico dulce mexicano para toda ocasión.</p>
+          <a href="https://wa.me/573503757354?text=Quiero%20Mazapanes" target="_blank" class="btn btn-wa">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="envios" id="envios">
+    <h3>📦 Envíos a Colombia</h3>
+    <p>Ofrecemos envíos económicos (10-20 días hábiles) y exprés (5-10 días hábiles). Todos los pedidos se empacan cuidadosamente y se coordinan los detalles por WhatsApp.</p>
+  </section>
+
+  <footer id="contacto">
+    <p>© <span id="anio"></span> Dulcería Mex. Todos los derechos reservados.</p>
+    <p>Contacto WhatsApp: <a href="https://wa.me/573503757354" target="_blank">+57 350 375 7354</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
